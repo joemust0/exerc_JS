@@ -1,0 +1,91 @@
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de média!</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-size: 24pt;
+            text-align: center;
+            color: darkblue;
+            background-color: lightblue;
+        }
+        h1{
+            font-size: 28pt;
+            border: 1px solid rgb(5, 7, 97);
+            background-color: #80a1d3d0;
+            border-radius: 50px;
+            margin-top: 10px;
+            margin-right: 400px;
+            margin-left: 400px;
+        }
+        .nt{
+            border: 2px solid;
+            box-shadow: inset -2px -2px 3px white;
+            font-size: 18pt;
+            text-align: center;
+            width: 170px;
+            margin: 5px;
+        }
+        .bt {
+            box-shadow: inset 3px -3px 5px blue;
+            font-size: 1.5rem;
+            line-height: 2.5;
+            border: 0;
+            padding: 0 20px;
+            color: blue;
+            border-radius: 10px;
+            background-color: lightskyblue;
+            margin: 30px;
+        }
+        .bt:hover{
+            background-color: turquoise;
+            box-shadow: inset 3px -3px 5px black;
+        }
+        .bt:active{
+            box-shadow: inset -3px 3px 5px rgb(0, 0, 0, 0.6);
+        }
+    </style>
+    <script language="javascript">
+        function calular(){
+
+        var n1 = parseFloat(document.getElementById("n1").value);
+        var n2 = parseFloat(document.getElementById("n2").value);
+        var n3 = parseFloat(document.getElementById("n3").value);
+        var n4 = parseFloat(document.getElementById("n4").value);
+        var md = ((n1+n2+n3+n4)/4)
+            if (md>=7) {
+            alert ("A média é " + md+ ". O aluno foi aprovado!");
+            }
+            else if (md>=5 && md<7){
+            alert ("A média é " + md+ ". O aluno está em recuperação!");
+            }
+            else {
+            alert ("A média é " + md+ ". O aluno foi reprovado!");
+                    }
+        }
+      </script>
+</head>
+<body>
+    <h1>Calculo de média do aluno.</h1>
+    <from>
+            Priemria nota</br>
+            <input class="nt" type="number" id="n1" placeholder="Digite a nota"/></br>
+             Segunda nota</br>
+            <input class="nt" type="number" id="n2"placeholder="Digite a nota" /></br>
+            Terceira nota</br>
+            <input class="nt" type="number" id="n3"placeholder="Digite a nota" /></br>
+            Quarta nota</br>
+            <input class="nt" type="number" id="n4"placeholder="Digite a nota" /></br>
+            <input class="bt" type="button" value="Calcular média" onclick="calular()">
+    </from>
+</body>
+</html>
